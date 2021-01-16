@@ -79,7 +79,7 @@
     <section class="page-section" id="services">
         <div class="container ">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase mb-5">Sambutan Dari jajaran</h2>
+                <h2 class="section-heading text-uppercase mb-5">Sambutan Kepala Sekolah</h2>
             </div>
             <div class="row mt-3 justify-content-center mb-5">
                 <div class="col-sm-4 offset-1 ">
@@ -87,13 +87,14 @@
 
                 </div>
                 <div class="col-sm-6 ">
-                    <h1>IBu Kita Kartini</h1>
-                    <p class="text-muted">Kepala Sekolah</p>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    <p>
+                    <h4>Tuan Guru Bajang Ilham Aisyi M.Hum</h4>
+                    </p>
                     <p class="text-justify text-muted mt-3 ">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ipsa earum explicabo, pariatur quis, consequatur facilis corrupti officiis iusto maiores et corporis necessitatibus est beatae quaerat excepturi delectus. Ex, laudantium dolores? Reiciendis harum minus soluta deleniti quam aperiam. Illo, veniam dolorem sunt iusto commodi iste consectetur similique tempore accusamus dolore ipsam maiores nihil neque facilis vero tenetur, facere odit officia eveniet, reprehenderit dignissimos autem. Assumenda, aliquam. Temporibus distinctio voluptatibus totam, nihil recusandae, similique cumque magni amet cum consectetur, nostrum quisquam. Aut vel a quos asperiores porro obcaecati, debitis ab qui laborum adipisci! Tempore animi exercitationem fuga amet dolorem consequatur et.
+                        Bismillahhirrahmanirrahim, Assalamualaikum warahmatullahi wabarakatuh, Salam Sejahtera bagi kita semua, Shalom, Om Swastyastu, Namo Budhaya, Salam Kebajikan.
+                    </p>
+                    <p class="text-justify text-muted mt-3">
+                        Puji syukur kami panjatkan kehadirat Tuhan Yang Maha Esa,bahwasanya dengan Rahmat dan Karunia-Nya lah Website sekolah ini dengan url www.smp-diponegoro.sch.id dapat kami wujudkan. Kami mengucapkan selamat datang di Website kami Sekolah Menengah Pertama (SMP) Pangeran Diponegoro Batuagung yang saya tunjukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.
                     </p>
                 </div>
             </div>

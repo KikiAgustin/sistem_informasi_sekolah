@@ -8,10 +8,16 @@
                         <li class="breadcrumb-item active" aria-current="page">Sejarah</li>
                     </ol>
                 </nav>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, aut inventore culpa incidunt sit qui eos repellat pariatur, veritatis id dolorum aperiam ipsam esse, nemo velit ab neque cupiditate? Ipsum vel fugit est beatae repudiandae voluptates et corporis quibusdam. Modi sed, dolorem sunt quae sapiente reprehenderit, quaerat totam placeat ducimus expedita quidem commodi iure alias. Reiciendis in magni a suscipit exercitationem ullam blanditiis iste accusantium enim! Dolor accusantium quae a facere distinctio aliquid dicta quisquam ipsum, excepturi sint corporis fuga eos eveniet, labore eum. Voluptatum quos consectetur autem accusamus ipsam nobis quas facilis amet rerum. Voluptatibus, dolores. Autem, quam! Laudantium.</p>
+                <p class="text align-center"> SMP Pangeran Diponegoro didirikan pada tahun 2005, berlokasi di Jl. Raya Desa Batuagung Kec. Balapulang, Tegal. Sekolah ini didirikan sebagai sekolah yang bertujuan menyediakan pendidikan masyarakat di sekitar Desa Batuagung yang tidak terjangkau oleh sekolah negeri yang telah ada.
+                    <br><br>
+                    Sesuai dengan peraturan yang ada bahwa menyusun perencanaan/program sekolah untuk jangka waktu yang akan datang merupakan suatu keharusan yang tidak bisa ditawar-tawar lagi, untuk hal tersebut Sekolah mencoba menyusun Rencana Kerja Jangka Menengah (RKJM) yang salah satunya di implementasikan dalam Program/Rencana Kerja Kepala Sekolah (RKKS) untuk jangka satu tahun kedepan, dengan harapan kegiatan-kegiatan rutin sekolah dan kegiatan-kegiatan pengembangan sekolah dapat lebih terprogram dan jelas arah tujuannya.
+                </p>
             </div>
             <div class="col-sm-4">
-                <h4 class="text-center mb-3">Ibu Kita Kartini</h4>
+                <h4 class="text-center mb-3">Sambutan Kepala Sekolah</h4>
+                <p class="text align-center">
+                <h6 class="text-muted">Tuan Guru Yang Dipertuankan Ilham Aisyi</h6>
+                </p>
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="<?= base_url('asset/template_user/'); ?>assets/img/team/img-kepala.png" width="200" height="200" class="img-fluid rounded " alt="">
@@ -19,12 +25,12 @@
                     <div class="col-sm-6">
 
                         <p class="text-justify">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus aliquam nostrum assumenda mollitia voluptas eaque omnis, autem eum wkwkwkw
+                            Bismillahhirrahmanirrahim, Assalamualaikum warahmatullahi wabarakatuh, Salam Sejahtera bagi kita semua, Shalom, Om Swastyastu, Namo Budhaya, Salam Kebajikan.
                         </p>
                     </div>
                 </div>
                 <p class="text-justify">
-                    alias mollitia expedita voluptatum impedit cumque officia quas natus esse, perspiciatis maiores a eveniet rem fugiat. Laborum id dicta numquam ullam esse voluptatum assumenda rem inventore veritatis. Id quod quibusdam possimus? Libero quidem ratione nisi temporibus reiciendis quod tempora doloribus molestiae optio placeat consequatur officia, mollitia sed minima rem a quia eos iusto commodi minus?
+                    Puji syukur kami panjatkan kehadirat Tuhan Yang Maha Esa,bahwasanya dengan Rahmat dan Karunia-Nya lah Website sekolah ini dengan url www.smp-diponegoro.sch.id dapat kami wujudkan. Kami mengucapkan selamat datang di Website kami Sekolah Menengah Pertama (SMP) Pangeran Diponegoro Batuagung yang saya tunjukan untuk seluruh unsur pimpinan, guru, karyawan dan siswa serta khalayak umum guna dapat mengakses seluruh informasi tentang segala profil, aktifitas/kegiatan serta fasilitas sekolah kami.
                 </p>
             </div>
         </div>
