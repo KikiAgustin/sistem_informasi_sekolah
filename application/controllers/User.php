@@ -36,4 +36,15 @@ class User extends CI_Controller
         $this->load->view('user/visi');
         $this->load->view('user/template/footer');
     }
+    public function struktur()
+    {
+        $data = [
+            'judul' => "SMP Pangeran Diponegora | Struktur Organisasi"
+        ];
+
+        $this->load->view('user/template/header', $data);
+        $this->load->view('user/template/navbar');
+        $this->load->view('user/struktur');
+        $this->load->view('user/template/footer');
+    }
 }

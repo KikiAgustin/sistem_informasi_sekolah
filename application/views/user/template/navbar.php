@@ -19,9 +19,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Sejarah</a>
+                            <a class="dropdown-item" href="<?= base_url("User/sejarah");  ?>">Sejarah</a>
                             <a class="dropdown-item" href="<?= base_url("User/visi");  ?>">Visi & Misi</a>
-                            <a class="dropdown-item" href="<?= base_url("User/visi");  ?>">Struktur Organisasi</a>
+                            <a class="dropdown-item" href="<?= base_url("User/struktur");  ?>">Struktur Organisasi</a>
                             <a class="dropdown-item" href="#">Fasilitas</a>
                             <a class="dropdown-item" href="#">Tata Tertib</a></a>
                             <a class="dropdown-item" href="#">Prestasi</a>
