@@ -10,8 +10,6 @@ class Data extends CI_Controller
 		$this->load->model('Model_siswa');
 		$data['datasiswa'] = $this->Model_siswa->datasiswa();
 
-
-
 		$this->load->view('template/header', $data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/sidebar');
@@ -24,73 +22,42 @@ class Data extends CI_Controller
 
 		$data['judul'] = "Tambah Data Siswa";
 
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar', $data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('data/tambahdatasiswa', $data);
+		$this->load->view('template/footer', $data);
 
-		$this->form_validation->set_rules('nis', 'nis', 'required');
-		$this->form_validation->set_rules('nama', 'nama', 'required');
-		$this->form_validation->set_rules('ttl', 'ttl', 'required');
-		$this->form_validation->set_rules('alamat', 'alamat', 'required');
-		$this->form_validation->set_rules('jk', 'jk', 'required');
-		$this->form_validation->set_rules('kelas', 'kelas', 'required');
+		$nis = $this->input->post('nis');
+		$nama = htmlspecialchars($this->input->post('nama'));
+		$ttl = $this->input->post('ttl');
+		$alamat = $this->input->post('alamat');
+		$jk = $this->input->post('jk');
+		$kelas = $this->input->post('kelas');
 
-		if ($this->form_validation->run() == false) {
+		$data = [
+			'nis' => $nis,
+			'nama' => $nama,
+			'ttl'  => $ttl,
+			'alamat'  => $alamat,
+			'jk'  => $jk,
+			'kelas'  => $kelas
+		];
 
-			$this->load->view('template/header', $data);
-			$this->load->view('template/topbar', $data);
-			$this->load->view('template/sidebar', $data);
-			$this->load->view('data/tambahdatasiswa', $data);
-			$this->load->view('template/footer', $data);
-		} else {
+		$this->db->insert('tb_siswa', $data);
+		// $this->session->set_flashdata()
+		redirect('Data/data_siswa');
 
-			$nis = $this->input->post('nis');
-			$nama = htmlspecialchars($this->input->post('nama'));
-			$ttl = $this->input->post('ttl');
-			$alamat = $this->input->post('alamat');
-			$jk = $this->input->post('jk');
-			$kelas = $this->input->post('kelas');
-
-			$data = [
-				'nis' => $nis,
-				'nama' => $nama,
-				'ttl'  => $ttl,
-				'alamat'  => $alamat,
-				'jk'  => $jk,
-				'kelas'  => $kelas
-			];
-
-			$this->db->insert('tb_siswa', $data);
-			// $this->session->set_flashdata()
-			redirect('Data/data_siswa');
-
-			// $this->Model_siswa->tambahdatasiswa();
-			// redirect('Data/data_siswa');
+		// $this->Model_siswa->tambahdatasiswa();
+		// redirect('Data/data_siswa')
 
 
-		}
+
 	}
 
 	public function edit_datasiswa($id_siswa)
 	{
-		$data['judul'] = "Edit Data Siswa";
-		$this->load->model('Model_siswa');
-
-		$data['getsiswa'] = $this->Model_siswa->getidsiswa($id_siswa);
-
-		$this->form_validation->set_rules('nis', 'nis', 'required');
-		$this->form_validation->set_rules('nama', 'nama', 'required');
-		$this->form_validation->set_rules('ttl', 'ttl', 'required');
-		$this->form_validation->set_rules('alamat', 'alamat', 'required');
-		$this->form_validation->set_rules('jk', 'jk', 'required');
-		$this->form_validation->set_rules('kelas', 'kelas', 'required');
-
-		if ($this->form_validation->run() == false) {
-
-
-			$this->load->view('template/header', $data);
-			$this->load->view('template/topbar', $data);
-			$this->load->view('template/sidebar', $data);
-			$this->load->view('data/edit_datasiswa', $data);
-			$this->load->view('template/footer', $data);
-		} else {
+		if (isset($_POST['submit'])) {
 
 			$nis = $this->input->post('nis');
 			$nama = htmlspecialchars($this->input->post('nama'));
@@ -113,11 +80,17 @@ class Data extends CI_Controller
 			$this->db->update('tb_siswa', $data);
 			// $this->session->set_flashdata()
 			redirect('Data/data_siswa');
+		} else {
+			$data['judul'] = "Edit Data Siswa";
+			$this->load->model('Model_siswa');
 
-			// $this->Model_siswa->tambahdatasiswa();
-			// redirect('Data/data_siswa');
+			$data['getsiswa'] = $this->Model_siswa->getidsiswa($id_siswa);
 
-
+			$this->load->view('template/header', $data);
+			$this->load->view('template/topbar', $data);
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('data/edit_datasiswa', $data);
+			$this->load->view('template/footer', $data);
 		}
 	}
 
@@ -132,14 +105,101 @@ class Data extends CI_Controller
 	{
 		$data['judul'] = "Data Guru";
 
-		$this->load->model('Model_siswa');
-		$data['dataguru'] = $this->Model_siswa->dataguru();
+		$this->load->model('Model_guru');
+		$data['dataguru'] = $this->Model_guru->dataguru();
 
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/topbar');
 		$this->load->view('template/sidebar');
-		$this->load->view('data/dataguru', $data);
+		$this->load->view('data/dataguru');
 		$this->load->view('template/footer');
+	}
+	public function tambahdataguru()
+	{
+
+		$data['judul'] = "Tambah Data guru";
+
+		$this->form_validation->set_rules('nip', 'nip', 'required');
+		$this->form_validation->set_rules('nama', 'nama', 'required');
+		$this->form_validation->set_rules('alamat', 'alamat', 'required');
+		$this->form_validation->set_rules('pendidikan', 'pendidikan', 'required');
+		$this->form_validation->set_rules('mapel', 'mapel', 'required');
+
+		if ($this->form_validation->run() == false) {
+
+			$this->load->view('template/header', $data);
+			$this->load->view('template/topbar', $data);
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('data/tambahdataguru', $data);
+			$this->load->view('template/footer', $data);
+		} else {
+
+			$nip = $this->input->post('nip');
+			$nama = htmlspecialchars($this->input->post('nama'));
+			$alamat = $this->input->post('alamat');
+			$pendidikan = $this->input->post('pendidikan');
+			$mapel = $this->input->post('mapel');
+
+			$data = [
+				'nip' => $nip,
+				'nama' => $nama,
+				'alamat'  => $alamat,
+				'pendidikan'  => $pendidikan,
+				'mapel'  => $mapel
+			];
+
+			$this->db->insert('tb_guru', $data);
+			// $this->session->set_flashdata()
+			redirect('Data/data_guru');
+
+			// $this->Model_guru->tambahdataguru();
+			// redirect('Data/data_guru');
+
+
+		}
+	}
+
+	public function edit_dataguru($id_guru)
+	{
+		if (isset($_POST['submit'])) {
+
+			$nip = $this->input->post('nip');
+			$nama = htmlspecialchars($this->input->post('nama'));
+			$alamat = $this->input->post('alamat');
+			$pendidikan = $this->input->post('pendidikan');
+			$mapel = $this->input->post('mapel');
+
+			$data = [
+				'nip' => $nip,
+				'nama' => $nama,
+				'ttl'  => $ttl,
+				'alamat'  => $alamat,
+				'pendidikan'  => $pendidikan,
+				'mapel'  => $mapel
+			];
+
+
+			$this->db->where('id_guru', $this->input->post('id_guru'));
+			$this->db->update('tb_guru', $data);
+			// $this->session->set_flashdata()
+			redirect('Data/data_guru');
+		} else {
+			$data['judul'] = "Edit Data guru";
+			$this->load->model('Model_guru');
+
+			$data['getidguru'] = $this->Model_guru->getidguru($id_guru);
+			$this->load->view('template/header', $data);
+			$this->load->view('template/topbar', $data);
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('data/edit_dataguru', $data);
+			$this->load->view('template/footer', $data);
+		}
+	}
+
+	public function hapus_dataguru($id_guru)
+	{
+		$this->db->delete('tb_guru', ['id_guru' => $id_guru]);
+		redirect('Data/data_guru');
 	}
 }

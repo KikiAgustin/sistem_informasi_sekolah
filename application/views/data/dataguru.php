@@ -5,7 +5,8 @@
      <div class="container-fluid">
        <div class="row mb-2">
          <div class="col-sm-6">
-           <h1 class="m-0">Data Guru</h1>
+           <h1 class="m-0">Data Guru</h1><br>
+           <a class="btn btn-primary" href="<?= base_url("Data/tambahdataguru") ?>">Tambah Data Guru</a>
          </div><!-- /.col -->
          <div class="col-sm-6">
 
@@ -35,7 +36,6 @@
                      <th>NIP</th>
                      <th>Nama</th>
                      <th>Alamat</th>
-                     <th>Jenis Kelamin</th>
                      <th>Mata pelajaran</th>
                    </tr>
                  </thead>
@@ -47,8 +47,14 @@
                        <td><?= $siswa["nip"]; ?></td>
                        <td><?= $siswa["nama"]; ?></td>
                        <td><?= $siswa["alamat"]; ?></td>
-                       <td><?= $siswa["jeniskelamin"]; ?></td>
-                       <td><?= $siswa["mata pelajaran"]; ?></td>
+                       <td><?= $siswa["mapel"]; ?></td>
+                       <td>
+                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opsi</a>
+
+                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <a class="dropdown-item" href="<?= base_url('Data/edit_dataguru/') .  $siswa["id_guru"]; ?>">Edit</a>
+                           <a onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="dropdown-item" href="<?= base_url('Data/hapus_dataguru/') . $siswa["id_guru"];  ?>">Hapus</a>
+                       </td>
 
                      </tr>
                      <?php $nomer++; ?>

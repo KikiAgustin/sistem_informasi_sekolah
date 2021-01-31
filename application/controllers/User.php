@@ -15,7 +15,7 @@ class User extends CI_Controller
     public function sejarah()
     {
         $data = [
-            'judul' => "SMP Pangeran Diponegora | Sejarah"
+            'judul' => "SMP Pangeran Diponegoro | Sejarah"
         ];
 
         $this->load->view('user/template/header', $data);
@@ -28,7 +28,7 @@ class User extends CI_Controller
     public function visi()
     {
         $data = [
-            'judul' => "SMP Pangeran Diponegora | Visi & Misi"
+            'judul' => "SMP Pangeran Diponegoro | Visi & Misi"
         ];
 
         $this->load->view('user/template/header', $data);
@@ -39,12 +39,23 @@ class User extends CI_Controller
     public function struktur()
     {
         $data = [
-            'judul' => "SMP Pangeran Diponegora | Struktur Organisasi"
+            'judul' => "SMP Pangeran Diponegoro | Struktur Organisasi"
         ];
 
         $this->load->view('user/template/header', $data);
         $this->load->view('user/template/navbar');
         $this->load->view('user/struktur');
+        $this->load->view('user/template/footer');
+    }
+    public function fasilitas()
+    {
+        $data = [
+            'judul' => "SMP Pangeran Diponegoro | fasilitas"
+        ];
+
+        $this->load->view('user/template/header', $data);
+        $this->load->view('user/template/navbar');
+        $this->load->view('user/fasilitas');
         $this->load->view('user/template/footer');
     }
 }

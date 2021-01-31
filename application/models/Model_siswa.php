@@ -9,10 +9,7 @@ class Model_siswa extends CI_Model
         return $this->db->get('tb_siswa')->result_array();
     }
 
-    public function dataguru()
-    {
-        return $this->db->get('tb_guru')->result_array();
-    }
+
 
     public function tambahdatasiswa()
     {
