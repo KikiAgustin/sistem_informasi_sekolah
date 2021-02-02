@@ -15,19 +15,23 @@
         <div class="container-fluid">
 
             <form action="" method="POST">
+                <h5 class="font-weight-bold">NIP</h5>
                 <input type="hidden" name="id_guru" value="<?= $getidguru['id_guru']; ?>">
                 <input type="text" name="nip" placeholder="nip" value="<?= $getidguru['nip'];   ?>">
                 <?= form_error('nip', '<small class="text-danger pl-3"', '</small>'); ?>
                 <br>
                 <br>
+                <h5 class="font-weight-bold">Nama</h5>
                 <input type="text" name="nama" placeholder="nama" value="<?= $getidguru['nama'];  ?>">
                 <?= form_error('nama', '<small class="text-danger pl-3"', '</small>'); ?>
                 <br>
                 <br>
+                <h5 class="font-weight-bold">Alamat</h5>
                 <input type="text" name="alamat" placeholder="ALAMAT" value="<?= $getidguru['alamat'];  ?>">
                 <?= form_error('alamat', '<small class="text-danger pl-3"', '</small>'); ?>
                 <br>
                 <br>
+                <h5 class="font-weight-bold">Mapel</h5>
                 <select name="pendidikan" id="" value="<?= $getidguru['pendidikan'];  ?>">
                     <option value="Matematika">Matematika</option>
                     <option value="Bahasa Inggris "> Bahasa Inggris</option>
@@ -35,12 +39,11 @@
                     <option value="IPA"> IPA</option>
                     <option value="IPS"> IPS</option>
                     <option value="PKN"> PKN</option>
-
-
                 </select>
                 <?= form_error('pendidikan', '<small class="text-danger pl-3"', '</small>'); ?>
                 <br>
                 <br>
+                <h5 class="font-weight-bold">Pendidikan</h5>
                 <select name="mapel" id="mapel" value="<?= $getidguru['mapel']; ?>">
                     <option value="">Pilih</option>
                     <option value="SMA/SMK">SMA/SMK</option>

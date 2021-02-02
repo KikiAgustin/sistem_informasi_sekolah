@@ -61,11 +61,17 @@
                                     <select class="custom-select form-control-border border-width-2" id="exampleSelectBorderWidth2" name="mapel">
                                         <option value="">Pilih</option>
                                         <option value="Matematika">Matematika</option>
-                                        <option value="Bahasa Inggris "> Bahasa Inggris</option>
+                                        <option value="Bahasa Inggris"> Bahasa Inggris</option>
                                         <option value="Bahasa Indonesia"> Bahasa Indonesia</option>
                                         <option value="IPA"> IPA</option>
                                         <option value="IPS"> IPS</option>
                                         <option value="PKN"> PKN</option>
+                                        <option value="Agama"> Agama</option>
+                                        <option value="BTQ"> BTQ</option>
+                                        <option value="Olahraga"> Olahraga</option>
+                                        <option value="Bahasa Jawa"> Bahasa Jawa</option>
+                                        <option value="Prakarya"> Prakarya</option>
+                                        <option value="SBK"> SBK</option>
                                     </select>
                                 </div>
                             </div>

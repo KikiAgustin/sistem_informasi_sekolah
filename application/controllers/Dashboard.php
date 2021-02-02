@@ -31,4 +31,13 @@ class Dashboard extends CI_Controller
 		} else {
 		}
 	}
+	public function data_alumni()
+	{
+		$data['judul'] = "data_alumni";
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar');
+		$this->load->view('template/sidebar');
+		$this->load->view('data/data_alumni', $data);
+		$this->load->view('template/footer');
+	}
 }

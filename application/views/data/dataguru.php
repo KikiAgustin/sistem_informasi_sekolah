@@ -37,6 +37,7 @@
                      <th>Nama</th>
                      <th>Alamat</th>
                      <th>Mata pelajaran</th>
+                     <th>Opsi</th>
                    </tr>
                  </thead>
                  <tbody>

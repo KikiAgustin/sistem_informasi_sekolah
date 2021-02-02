@@ -173,7 +173,6 @@ class Data extends CI_Controller
 			$data = [
 				'nip' => $nip,
 				'nama' => $nama,
-				'ttl'  => $ttl,
 				'alamat'  => $alamat,
 				'pendidikan'  => $pendidikan,
 				'mapel'  => $mapel
@@ -201,5 +200,101 @@ class Data extends CI_Controller
 	{
 		$this->db->delete('tb_guru', ['id_guru' => $id_guru]);
 		redirect('Data/data_guru');
+	}
+
+	public function data_alumni()
+	{
+		$data['judul'] = "Data Alumni";
+
+		$this->load->model('Model_alumni');
+		$data['data_alumni'] = $this->Model_alumni->data_alumni();
+
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar');
+		$this->load->view('template/sidebar');
+		$this->load->view('data/data_alumni');
+		$this->load->view('template/footer');
+	}
+	public function tambah_dataalumni()
+	{
+
+		$data['judul'] = "Tambah Data alumni";
+
+		$this->form_validation->set_rules('nisn', 'nisn', 'required');
+		$this->form_validation->set_rules('nama', 'nama', 'required');
+		$this->form_validation->set_rules('alamat', 'alamat', 'required');
+		$this->form_validation->set_rules('th_lulus', 'th_lulus', 'required');
+
+		if ($this->form_validation->run() == false) {
+
+			$this->load->view('template/header', $data);
+			$this->load->view('template/topbar', $data);
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('data/tambah_dataalumni', $data);
+			$this->load->view('template/footer', $data);
+		} else {
+
+			$nisn = $this->input->post('nisn');
+			$nama = htmlspecialchars($this->input->post('nama'));
+			$alamat = $this->input->post('alamat');
+			$th_lulus = $this->input->post('th_lulus');
+
+			$data = [
+				'nisn' => $nisn,
+				'nama' => $nama,
+				'alamat'  => $alamat,
+				'th_lulus'  => $th_lulus
+			];
+
+			$this->db->insert('tb_alumni', $data);
+			// $this->session->set_flashdata()
+			redirect('Data/data_alumni');
+
+			// $this->Model_guru->tambahdataguru();
+			// redirect('Data/data_guru');
+
+
+		}
+	}
+
+	public function edit_alumni($id_alumni)
+	{
+		if (isset($_POST['submit'])) {
+
+			$nisn = $this->input->post('nisn');
+			$nama = htmlspecialchars($this->input->post('nama'));
+			$alamat = $this->input->post('alamat');
+			$th_lulus = $this->input->post('th_lulus');
+
+			$data = [
+				'nisn' => $nisn,
+				'nama' => $nama,
+				'alamat'  => $alamat,
+				'th_lulus'  => $th_lulus
+			];
+
+
+			$this->db->where('id_alumni', $this->input->post('id_alumni'));
+			$this->db->update('tb_alumni', $data);
+			// $this->session->set_flashdata()
+			redirect('Data/data_alumni');
+		} else {
+			$data['judul'] = "Edit Data alumni";
+			$this->load->model('Model_alumni');
+
+			$data['getidalumni'] = $this->Model_alumni->getidalumni($id_alumni);
+			$this->load->view('template/header', $data);
+			$this->load->view('template/topbar', $data);
+			$this->load->view('template/sidebar', $data);
+			$this->load->view('data/edit_dataalumni', $data);
+			$this->load->view('template/footer', $data);
+		}
+	}
+
+	public function hapus_dataalumni($id_alumni)
+	{
+		$this->db->delete('tb_alumni', ['id_alumni' => $id_alumni]);
+		redirect('Data/data_alumni');
 	}
 }
