@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jan 2021 pada 15.32
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.3.22
+-- Generation Time: Feb 02, 2021 at 04:28 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_guru`
+-- Table structure for table `tbl_user`
+--
+
+CREATE TABLE `tbl_user` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(70) NOT NULL,
+  `email` varchar(70) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `date_created` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`id_user`, `username`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
+(1, 'admin', 'admin@admin.com', 'default.jpg', '$2y$10$r2cm6td9e7Q.SmCMiLKNXOe.ZHq.itfOWWeAROkaE0q1JfSkysNw.', 1, 1, 1610832225);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_guru`
 --
 
 CREATE TABLE `tb_guru` (
@@ -37,7 +61,7 @@ CREATE TABLE `tb_guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_guru`
+-- Dumping data for table `tb_guru`
 --
 
 INSERT INTO `tb_guru` (`id_guru`, `nip`, `nama`, `alamat`, `jk`, `mata_pelajaran`) VALUES
@@ -47,7 +71,7 @@ INSERT INTO `tb_guru` (`id_guru`, `nip`, `nama`, `alamat`, `jk`, `mata_pelajaran
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_misivisi`
+-- Table structure for table `tb_misivisi`
 --
 
 CREATE TABLE `tb_misivisi` (
@@ -57,7 +81,7 @@ CREATE TABLE `tb_misivisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_misivisi`
+-- Dumping data for table `tb_misivisi`
 --
 
 INSERT INTO `tb_misivisi` (`id_misi`, `judul`, `isi`) VALUES
@@ -67,7 +91,7 @@ INSERT INTO `tb_misivisi` (`id_misi`, `judul`, `isi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_siswa`
+-- Table structure for table `tb_siswa`
 --
 
 CREATE TABLE `tb_siswa` (
@@ -81,7 +105,7 @@ CREATE TABLE `tb_siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_siswa`
+-- Dumping data for table `tb_siswa`
 --
 
 INSERT INTO `tb_siswa` (`id_siswa`, `nis`, `nama`, `ttl`, `alamat`, `jk`, `kelas`) VALUES
@@ -96,41 +120,53 @@ INSERT INTO `tb_siswa` (`id_siswa`, `nis`, `nama`, `ttl`, `alamat`, `jk`, `kelas
 --
 
 --
--- Indeks untuk tabel `tb_guru`
+-- Indexes for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- Indexes for table `tb_guru`
 --
 ALTER TABLE `tb_guru`
   ADD PRIMARY KEY (`id_guru`);
 
 --
--- Indeks untuk tabel `tb_misivisi`
+-- Indexes for table `tb_misivisi`
 --
 ALTER TABLE `tb_misivisi`
   ADD PRIMARY KEY (`id_misi`);
 
 --
--- Indeks untuk tabel `tb_siswa`
+-- Indexes for table `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
   ADD PRIMARY KEY (`id_siswa`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_guru`
+-- AUTO_INCREMENT for table `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_guru`
 --
 ALTER TABLE `tb_guru`
   MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_misivisi`
+-- AUTO_INCREMENT for table `tb_misivisi`
 --
 ALTER TABLE `tb_misivisi`
   MODIFY `id_misi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_siswa`
+-- AUTO_INCREMENT for table `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
   MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;

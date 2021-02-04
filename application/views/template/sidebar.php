@@ -28,7 +28,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= base_url("Dashboard/tambahUser") ?>" class="nav-link">
+          <a href="<?= base_url("Dashboard/dataUser") ?>" class="nav-link">
             <i class="nav-icon fas fa-user"></i>
             <p>
               User

@@ -13,6 +13,16 @@ class Dashboard extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function dataUser()
+	{
+		$data['judul'] = "Data User";
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar');
+		$this->load->view('template/sidebar');
+		$this->load->view('admin/data_user');
+		$this->load->view('template/footer');
+	}
+
 	public function tambahUser()
 	{
 
@@ -29,6 +39,10 @@ class Dashboard extends CI_Controller
 			$this->load->view('admin/tambah_data_user');
 			$this->load->view('template/footer');
 		} else {
+			$this->load->model('Model_admin');
+			$this->Model_admin->tambahUser();
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert" >User Berhasil ditambah</div>');
+			redirect('Dashboard');
 		}
 	}
 	public function data_alumni()
