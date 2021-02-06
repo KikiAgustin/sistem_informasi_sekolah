@@ -22,7 +22,7 @@
                         </div>
                     </div>
 
-                    <form action="" method="POST">
+                    <form action="" method="POST" enctype="multipart/form-data">
 
                         <div class="card-body">
                             <div class="form-group">
@@ -74,6 +74,13 @@
                                         <option value="SBK"> SBK</option>
                                     </select>
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="alamat">Foto</label>
+                                <input class="form-control" type="file" name="foto_guru" placeholder="Foto Guru">
+                                <?= form_error('alamat', '<small class="text-danger pl-3"', '</small>'); ?>
+
                             </div>
 
                             <button name="submit" type="submit" class="btn btn-primary">Tambah Data</button>

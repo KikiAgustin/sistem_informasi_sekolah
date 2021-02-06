@@ -58,4 +58,21 @@ class User extends CI_Controller
         $this->load->view('user/fasilitas');
         $this->load->view('user/template/footer');
     }
+
+    // Menampilkan data guru dihalaman user
+    public function dataGuruUser()
+    {
+
+        $dataGuru = $this->db->get('tb_guru')->result_array();
+
+        $data = [
+            'judul' => "SMP Pangeran Diponegoro | Data Guru",
+            'data_guru' => $dataGuru
+        ];
+
+        $this->load->view('user/template/header', $data);
+        $this->load->view('user/template/navbar');
+        $this->load->view('user/data_guru');
+        $this->load->view('user/template/footer');
+    }
 }

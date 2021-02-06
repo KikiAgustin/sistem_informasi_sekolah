@@ -141,12 +141,36 @@ class Data extends CI_Controller
 			$pendidikan = $this->input->post('pendidikan');
 			$mapel = $this->input->post('mapel');
 
+			// Uploag Gamabar
+			$fotoGuru = $_FILES['foto_guru']['name'];
+
+			if ($fotoGuru) {
+
+				// Format Gambar
+				$config['allowed_types'] = 'gif|jpg|png';
+				// Ukuran Gambar Maksimal 5 MB
+				$config['max_size']     = '5000';
+				// Tujuan Upload Gmbar
+				$config['upload_path'] = './asset/gambar/guru/';
+
+				$this->load->library('upload', $config);
+
+				if ($this->upload->do_upload('foto_guru')) {
+					$foto_baru = $this->upload->data('file_name');
+				} else {
+					echo $this->upload->display_errors();;
+				}
+			}
+
+			if (empty($foto_baru)) $foto_baru = "default.jpg";
+
 			$data = [
 				'nip' => $nip,
 				'nama' => $nama,
 				'alamat'  => $alamat,
 				'pendidikan'  => $pendidikan,
-				'mapel'  => $mapel
+				'mapel'  => $mapel,
+				'foto' => $foto_baru
 			];
 
 			$this->db->insert('tb_guru', $data);

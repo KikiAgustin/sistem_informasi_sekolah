@@ -33,6 +33,7 @@
                  <thead>
                    <tr>
                      <th>No</th>
+                     <th>Foto</th>
                      <th>NIP</th>
                      <th>Nama</th>
                      <th>Alamat</th>
@@ -45,6 +46,7 @@
                    <?php foreach ($dataguru as $siswa) : ?>
                      <tr>
                        <td><?= $nomer; ?></td>
+                       <td><img width="120px" height="120px" class="img-thumbnail" src="<?= base_url('asset/gambar/guru/') . $siswa['foto']; ?>" alt="<?= $siswa["nama"]; ?>"></td>
                        <td><?= $siswa["nip"]; ?></td>
                        <td><?= $siswa["nama"]; ?></td>
                        <td><?= $siswa["alamat"]; ?></td>

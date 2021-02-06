@@ -27,7 +27,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warga Sekolah </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="<?= base_url("Data/dataguru"); ?>">Daftar Guru</a>
+                            <a class="dropdown-item" href="<?= base_url("User/dataGuruUser"); ?>">Daftar Guru</a>
                             <a class="dropdown-item" href="<?= base_url("Data/siswa"); ?>">Daftar Siswa</a>
                             <a class="dropdown-item" href="<?= base_url("Data/dataalumni"); ?>">Daftar Alumni</a>
                             </a>
