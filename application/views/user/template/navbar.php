@@ -21,22 +21,22 @@
                             <a class="dropdown-item" href="<?= base_url("User/visi");  ?>">Visi & Misi</a>
                             <a class="dropdown-item" href="<?= base_url("User/struktur");  ?>">Struktur Organisasi</a>
                             <a class="dropdown-item" href="<?= base_url("User/fasilitas");  ?>">Fasilitas</a>
-                            <a class="dropdown-item" href="<?= base_url("User/ttatatertib");  ?>">Tata Tertib</a></a>
+                            <a class="dropdown-item" href="<?= base_url("User/tatatertib");  ?>">Tata Tertib</a></a>
                             <a class="dropdown-item" href="<?= base_url("User/prestasi");  ?>">Prestasi</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warga Sekolah </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Daftar Guru</a>
-                            <a class="dropdown-item" href="#">Daftar Siswa</a>
-                            <a class="dropdown-item" href="#">Daftar Alumni</a></a>
+                            <a class="dropdown-item" href="<?= base_url("Data/dataguru"); ?>">Daftar Guru</a>
+                            <a class="dropdown-item" href="<?= base_url("Data/siswa"); ?>">Daftar Siswa</a>
+                            <a class="dropdown-item" href="<?= base_url("Data/dataalumni"); ?>">Daftar Alumni</a>
+                            </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Berita">Berita</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Acara">Acara</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Berita">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Ekstrakulikuler">Ekstrakulikuler</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Galeri">Galeri</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Kritik & Saran">Kritik & Saran</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Kritik & Saran">PPDB</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Login">Login</a></li>
 
                 </ul>
             </div>

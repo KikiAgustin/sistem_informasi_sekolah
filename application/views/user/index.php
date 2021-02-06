@@ -43,16 +43,15 @@
                             <a class="dropdown-item" href="<?= base_url("User/visi");  ?>">Visi & Misi</a>
                             <a class="dropdown-item" href="<?= base_url("User/struktur");  ?>">Struktur Organisasi</a>
                             <a class="dropdown-item" href="<?= base_url("User/fasilitas"); ?>">Fasilitas</a>
-                            <a class="dropdown-item" href="#">Tata Tertib</a></a>
-                            <a class="dropdown-item" href="#">Prestasi</a>
-                            <a class="dropdown-item" href="#">Lokasi</a>
+                            <a class="dropdown-item" href="<?= base_url("User/tatatertib"); ?>">Tata Tertib</a></a>
+                            <a class="dropdown-item" href="<?= base_url("User/prestasi"); ?>">Prestasi</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akademik </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warga Sekolah </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Daftar Guru</a>
-                            <a class="dropdown-item" href="#">Daftar Siswa</a>
-                            <a class="dropdown-item" href="#">Daftar Alumni</a></a>
+                            <a class="dropdown-item" href="<?= base_url("Data/dataguru"); ?>">Daftar Guru</a>
+                            <a class="dropdown-item" href="<?= base_url("Data/datasiswa"); ?>">Daftar Siswa</a>
+                            <a class="dropdown-item" href="<?= base_url("Data/datalumni"); ?>">Daftar Alumni</a></a>
                     </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Berita">Berita</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Acara">Acara</a></li>
@@ -300,7 +299,7 @@
     <section class="page-section" id="about">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase mb-5">Ekstra Kulikuler</h2>
+                <h2 class="section-heading text-uppercase mb-5">EkstraKulikuler</h2>
             </div>
             <ul class="timeline">
                 <li>
