@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-11">
+            <div class="col-sm-12">
                 <nav>
                     <ol class="breadcrumb bg-transparent pl-0">
                         <li class="breadcrumb-item"><a href="<?= base_url('User'); ?>">Home</a></li>
